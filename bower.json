@@ -1,0 +1,17 @@
+{
+  "name": "travel",
+  "homepage": "https://github.com/123prove123/travel",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
