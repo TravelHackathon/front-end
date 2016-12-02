@@ -39,28 +39,41 @@ body {
   flex-wrap: wrap;
   border-bottom: 1px solid #ccc; }
 
-.header-nav {
+.header-nav, .header-nav-right {
   margin-bottom: 0;
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
   padding-left: 0; }
-  .header-nav li {
+  .header-nav li, .header-nav-right li {
     display: inline-block; }
-    .header-nav li a {
+    .header-nav li a, .header-nav-right li a {
       display: block;
       padding: 10px 15px;
       margin: 0 5px;
       color: #000;
       text-decoration: none; }
-      .header-nav li a:hover {
+      .header-nav li a:hover, .header-nav-right li a:hover {
         color: #55a4ff; }
+
+.header-nav-right {
+  padding-right: 50px;
+  margin-left: auto; }
+  .header-nav-right li a {
+    font-size: 17px;
+    padding: 7px 20px 8px;
+    background: #55a4ff;
+    color: #fff;
+    border-radius: 8px; }
+    .header-nav-right li a:hover {
+      color: #fff; }
 
 .content {
   display: flex;
   flex-wrap: wrap;
   height: calc(100vh - 60px);
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   .content .main-map {
     width: 50%; }
   .content .aside {
@@ -118,5 +131,73 @@ body {
         .content .aside .aside-content .aside-item .aside-item_category {
           font-size: 16px;
           color: #fff; }
+  .content .guide-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    overflow-y: scroll;
+    height: auto;
+    width: 100%; }
+    .content .guide-content .guide-item {
+      width: calc(20% - 40px);
+      margin: 10px 20px;
+      height: 300px;
+      text-align: center; }
+      .content .guide-content .guide-item .img-row {
+        margin: 0 auto;
+        background: #000;
+        text-align: center;
+        padding-top: 10px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden; }
+      .content .guide-content .guide-item .guide-stars {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0; }
+        .content .guide-content .guide-item .guide-stars li {
+          margin: 0 5px; }
+          .content .guide-content .guide-item .guide-stars li i.active {
+            color: #ff7710; }
+      .content .guide-content .guide-item img {
+        max-width: 130px;
+        max-height: 130px; }
+  .content .guide-item-popup {
+    transition: .5s;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 3; }
+    .content .guide-item-popup .popup-close {
+      font-size: 24px;
+      color: #000;
+      position: absolute;
+      top: 20px;
+      right: 35px; }
+
+.aside-item-generate {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 3;
+  transition: .5s; }
+  .aside-item-generate .aside-item_close {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    font-family: sans-serif;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #000;
+    font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */

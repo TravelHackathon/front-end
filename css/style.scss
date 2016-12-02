@@ -5,6 +5,7 @@ $black: #000;
 $blue: #55a4ff;
 $white: #fff;
 $grey: #ccc;
+$stars: #ff7710;
 
 body {
   padding: 0;
@@ -75,11 +76,28 @@ body {
   }
 }
 
+.header-nav-right {
+  @extend .header-nav;
+  padding-right: 50px;
+  margin-left: auto;
+  li a {
+    font-size: 17px;
+    padding: 7px 20px 8px;
+    background: $blue;
+    color:$white;
+    border-radius:8px;
+    &:hover {
+      color:$white;
+    }
+  }
+}
+
 .content {
   display: flex;
   flex-wrap: wrap;
   height:calc(100vh - 60px);
   overflow: hidden;
+  position: relative;
   .main-map {
     width: 50%;
   }
@@ -150,5 +168,86 @@ body {
         }
       }
     }
+  }
+  .guide-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    overflow-y:scroll;
+    height: auto;
+    width: 100%;
+    .guide-item {
+      width: calc(20% - 40px);
+      margin: 10px 20px;
+      height:300px;
+      text-align: center;
+      .img-row {
+        margin: 0 auto;
+        background: #000;
+        text-align: center;
+        padding-top: 10px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .guide-stars {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+        li {
+          margin: 0 5px;
+          i.active {
+            color:$stars;
+          }
+        }
+      }
+      img {
+        max-width:130px;
+        max-height:130px;
+      }
+    }
+  }
+  .guide-item-popup {
+    transition:.5s;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    z-index: 3;
+    .popup-close {
+      font-size: 24px;
+      color:$black;
+      position: absolute;
+      top: 20px;
+      right: 35px;
+    }
+  }
+}
+
+.aside-item-generate {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: $white;
+  z-index: 3;
+  transition:.5s;
+  .aside-item_close {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    font-family:sans-serif;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color:$black;
+    font-weight: bold;
+  }
+  .aside-item_inner {
   }
 }
