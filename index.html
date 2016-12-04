@@ -1,168 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
+
 <body>
 
 
-<header class="header">
-    <div class="header-logo">
-        <div class="brand-logo">Tourism</div>
+
+<div class="content">
+  <ul id="slide-out" class="side-nav fixed">
+    <li class="logo"><a href="#" class="brand-logo"><img src="img/trelper.svg" alt=""></a></li>
+    <li class="select">
+      <div class="input-field col s12">
+        <select>
+          <option value="" disabled selected>Choose your action</option>
+          <option value="1">action 1</option>
+          <option value="2">action 2</option>
+          <option value="3">action 3</option>
+        </select>
+      </div>
+    </li>
+    <li><a href="#">Add promo code</a></li>
+  </ul>
+  <div class="place-container">
+    <div class="nav-wrapper">
+      <a class="page-title">Hayat</a>
+      <a data-target="modal1" class="create-promo-open-button waves-effect waves-light btn">Create promocode</a>
     </div>
-    <div class="header-nav-row">
-        <ul class="header-nav">
-            <li><a href="#">Исторические места</a></li>
-            <li><a href="#">Горный туризм</a></li>
-            <li><a href="#">Горнолыжные базы</a></li>
-            <li><a href="#">Отели, Хостелы</a></li>
-            <li><a href="#">Билеты</a></li>
-        </ul>
-        <ul class="header-nav-right">
-            <li><a href="#">Найти гида</a></li>
-        </ul>
-    </div>
-</header>
-
-
-<main class="content">
-    <div class="main-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3073527.863619182!2d74.5492888!3d41.2110464!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2skg!4v1480515787806" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
-    <div class="aside-item-generate">
-        <div href="#"  class="aside-item_close">X</div>
-        <div class="aside-item_inner">
-            <p>Первый таб ИНФА О МЕСТЕ <br>
-
-                Слайдер с картинками.
-                Название.
-                Описаниье.
-                Примерная цена без билета
-            </p>
-            <p>КАК добраться где жить<br>
-                Как дорбаться.
-                Ссылки хостелов отелей.
-                Ссылки билетов.
-                Туристическии компании.
-                Услуги Гидов.
-
-
-            </p>
-
-            <p>Ваши шаги для отдыха.
-
-
-            </p>
+    <div class="place-content">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-content white-text">
+              <span class="card-title">Title promo</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              <br>
+              <p>Code: 1042131</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Remove</a>
+              <a href="#">Edit</a>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="aside">
-        <div class="aside-header">
-          <a class="aside-header__slogan">Горный туризм</a>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-content white-text">
+              <span class="card-title">Title promo</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              <br>
+              <p>Code: 1042131</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Remove</a>
+              <a href="#">Edit</a>
+            </div>
+          </div>
         </div>
-        <div class="aside-content">
-            <div class="aside-item">
-                <img src="img/item-img-1.png" alt="" class="aside-item_img">
-                <a href="#" class="aside-item_link"></a>
-                <div class="aside-item__footer">
-                  <div class="aside-item_name">Пик победы</div>
-                  <div class="aside-item_category">Горный туризм</div>
-                  <div class="aside-item_price">Цена: 20$</div>
-                </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-content white-text">
+              <span class="card-title">Title promo</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              <br>
+              <p>Code: 1042131</p>
             </div>
-            <div class="aside-item">
-                <img src="img/item-img-2.jpg" alt="" class="aside-item_img">
-                <a href="#" class="aside-item_link"></a>
-                <div class="aside-item__footer">
-                  <div class="aside-item_name">Пик победы</div>
-                  <div class="aside-item_category">Горный туризм</div>
-                  <div class="aside-item_price">Цена: 20$</div>
-                </div>
+            <div class="card-action">
+              <a href="#">Remove</a>
+              <a href="#">Edit</a>
             </div>
-            <div class="aside-item">
-                <img src="img/item-img-3.jpg" alt="" class="aside-item_img">
-                <a href="#" class="aside-item_link"></a>
-                <div class="aside-item__footer">
-                  <div class="aside-item_name">Пик победы</div>
-                  <div class="aside-item_category">Горный туризм</div>
-                  <div class="aside-item_price">Цена: 20$</div>
-                </div>
-            </div>
-            <div class="aside-item">
-                <img src="img/item-img-4.jpg" alt="" class="aside-item_img">
-                <a href="#" class="aside-item_link"></a>
-                <div class="aside-item__footer">
-                  <div class="aside-item_name">Пик победы</div>
-                  <div class="aside-item_category">Горный туризм</div>
-                  <div class="aside-item_price">Цена: 20$</div>
-                </div>
-            </div>
-            <div class="aside-item">
-                <img src="img/item-img-5.jpg" alt="" class="aside-item_img">
-                <a href="#" class="aside-item_link"></a>
-                <div class="aside-item__footer">
-                  <div class="aside-item_name">Пик победы</div>
-                  <div class="aside-item_category">Горный туризм</div>
-                  <div class="aside-item_price">Цена: 20$</div>
-                </div>
-            </div>
-            <div class="aside-item">
-              <img src="img/item-img-1.png" alt="" class="aside-item_img">
-              <a href="#" class="aside-item_link"></a>
-              <div class="aside-item__footer">
-                <div class="aside-item_name">Пик победы</div>
-                <div class="aside-item_category">Горный туризм</div>
-                <div class="aside-item_price">Цена: 20$</div>
-              </div>
-            </div>
-            <div class="aside-item">
-              <img src="img/item-img-1.png" alt="" class="aside-item_img">
-              <a href="#" class="aside-item_link"></a>
-              <div class="aside-item__footer">
-                <div class="aside-item_name">Пик победы</div>
-                <div class="aside-item_category">Горный туризм</div>
-                <div class="aside-item_price">Цена: 20$</div>
-              </div>
-            </div>
-            <div class="aside-item">
-              <img src="img/item-img-2.jpg" alt="" class="aside-item_img">
-              <a href="#" class="aside-item_link"></a>
-              <div class="aside-item__footer">
-                <div class="aside-item_name">Пик победы</div>
-                <div class="aside-item_category">Горный туризм</div>
-                <div class="aside-item_price">Цена: 20$</div>
-              </div>
-            </div>
-            <div class="aside-item">
-              <img src="img/item-img-3.jpg" alt="" class="aside-item_img">
-              <a href="#" class="aside-item_link"></a>
-              <div class="aside-item__footer">
-                <div class="aside-item_name">Пик победы</div>
-                <div class="aside-item_category">Горный туризм</div>
-                <div class="aside-item_price">Цена: 20$</div>
-              </div>
-            </div>
-            <div class="aside-item">
-              <img src="img/item-img-4.jpg" alt="" class="aside-item_img">
-              <a href="#" class="aside-item_link"></a>
-              <div class="aside-item__footer">
-                <div class="aside-item_name">Пик победы</div>
-                <div class="aside-item_category">Горный туризм</div>
-                <div class="aside-item_price">Цена: 20$</div>
-              </div>
-            </div>
+          </div>
         </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-content white-text">
+              <span class="card-title">Title promo</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              <br>
+              <p>Code: 1042131</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Remove</a>
+              <a href="#">Edit</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-content white-text">
+              <span class="card-title">Title promo</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              <br>
+              <p>Code: 1042131</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Remove</a>
+              <a href="#">Edit</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-content white-text">
+              <span class="card-title">Title promo</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              <br>
+              <p>Code: 1042131</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Remove</a>
+              <a href="#">Edit</a>
+            </div>
+          </div>
+        </div><div class="col s12 m4">
+        <div class="card">
+          <div class="card-content white-text">
+            <span class="card-title">Title promo</span>
+            <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            <br>
+            <p>Code: 1042131</p>
+          </div>
+          <div class="card-action">
+            <a href="#">Remove</a>
+            <a href="#">Edit</a>
+          </div>
+        </div>
+      </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-content white-text">
+              <span class="card-title">Title promo</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              <br>
+              <p>Code: 1042131</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Remove</a>
+              <a href="#">Edit</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-content white-text">
+              <span class="card-title">Title promo</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              <br>
+              <p>Code: 1042131</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Remove</a>
+              <a href="#">Edit</a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
     </div>
-</main>
+  </div>
+</div>
+
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Add an Promocode</h4>
+
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="promo-title" type="text" class="validate">
+            <label for="promo-title">Title</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="promo-sale" type="number" class="validate">
+            <label for="promo-sale">Sale</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="description" type="text" class="validate">
+            <label for="description">Description</label>
+          </div>
+        </div>
+
+        <a class="create-button modal-action modal-close waves-effect waves-white btn-flat">Create</a>
+      </form>
+    </div>
+  </div>
+</div>
 
 
-
-
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="bower_components/materialize/dist/js/materialize.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

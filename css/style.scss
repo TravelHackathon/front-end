@@ -1,253 +1,100 @@
 $regular: 'Roboto';
 
-// colors
-$black: #000;
-$blue: #55a4ff;
+$orange: #ef6522;
 $white: #fff;
-$grey: #ccc;
-$stars: #ff7710;
+$black: #000;
+
+$black-1: #5f5855;
 
 body {
-  padding: 0;
-  margin: 0;
-  font-family: $regular;
+  font-family:$regular;
 }
-
-.header {
-  display: flex;
-  max-height: 60px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.header-logo {
-  width: 15%;
-  position: relative;
-  background: $blue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .brand-logo {
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color:$white;
+.place-container {
+  margin-left: 300px;
+  .nav-wrapper {
+    border-bottom: 3px solid $orange;
+    padding-right: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .page-title {
+      line-height: 120px;
+      margin-left:50px;
+      display: inline-block;
+      font-size: 48px;
+      color:$black-1;
+    }
+    .create-promo-open-button {
+      margin-left: auto;
+      background: $orange;
+    }
   }
-  img {
-    max-width: 100%;
-    width: auto;
-    height: 100%;
-  }
-  a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.header-nav-row {
-  width: 85%;
-  padding: 10px 0;
-  display: flex;
-  flex-wrap: wrap;
-  border-bottom:1px solid $grey;
-}
-
-.header-nav {
-  margin-bottom: 0;
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  padding-left: 0;
-  li {
-    display: inline-block;
-    a {
-      display: block;
-      padding: 10px 15px;
-      margin: 0 5px;
-      color:$black;
-      text-decoration: none;
-      &:hover {
-        color:$blue;
+  .card {
+    .card-content {
+      .card-title {
+        color:$black-1;
+      }
+      p {
+        color: $black-1;
       }
     }
   }
+
 }
 
-.header-nav-right {
-  @extend .header-nav;
-  padding-right: 50px;
-  margin-left: auto;
-  li a {
-    font-size: 17px;
-    padding: 7px 20px 8px;
-    background: $blue;
+.side-nav {
+  background: $orange;
+  .select {
+    padding: 0 32px;
     color:$white;
-    border-radius:8px;
+    .select-wrapper span.caret {
+      color:$white;
+    }
+    input {
+      border-bottom-color:$white;
+    }
+    .dropdown-content li>a, .dropdown-content li>span {
+      color:$orange;
+    }
+  }
+  .brand-logo {
     &:hover {
+      background: transparent;
+    }
+  }
+  .logo {
+    margin: 30px 0 20px;
+  }
+  li {
+    a {
       color:$white;
     }
   }
 }
 
-.content {
-  display: flex;
-  flex-wrap: wrap;
-  height:calc(100vh - 60px);
-  overflow: hidden;
-  position: relative;
-  .main-map {
-    width: 50%;
-  }
-  .aside {
-    width: 50%;
-    padding: 0 10px;
-    max-height: 100%;
-    overflow-y:scroll;
-    box-shadow: 0 0 9px 0 rgba($black, .5);
-    .aside-header {
-      .aside-header__slogan {
-        font-size: 24px;
-        margin-top: 10px;
-        font-weight: bold;
-      }
-    }
-    .aside-content {
-      display: flex;
-      flex-wrap: wrap;
-      overflow-x: hidden;
-      padding: 5px 0;
-      margin-left: -5px;
-      margin-right: -5px;
-      .aside-item {
-        width: calc(50% - 10px);
-        height: 170px;
-        margin: 5px;
-        position: relative;
-        .aside-item_img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: -1;
-        }
-        .aside-item__footer {
-          position: absolute;
-          bottom: 0;
-          padding-left: 8px;
-          padding-bottom: 8px;
+.modal {
 
-          color:$white;
-          font-family:$regular;
-          left: 0;
-        }
-        .aside-item_link {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba($black, .3);
-          transition:.3s;
-          z-index: 1;
-          &:hover {
-            opacity: 0;
-          }
-        }
-        .aside-item_name {
-          width: 100%;
-          font-size: 18px;
-          font-weight: bold;
-        }
-        .aside-item_category {
-          font-size: 16px;
-          color:$white;
-        }
-      }
-    }
+  h4 {
+    margin-left: 20px;
+    color:$orange;
+    font-size: 20px;
   }
-  .guide-content {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 50px;
-    overflow-y:scroll;
-    height: auto;
-    width: 100%;
-    .guide-item {
-      width: calc(20% - 40px);
-      margin: 10px 20px;
-      height:300px;
-      text-align: center;
-      .img-row {
-        margin: 0 auto;
-        background: #000;
-        text-align: center;
-        padding-top: 10px;
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        overflow: hidden;
-      }
-      .guide-stars {
-        display: flex;
-        justify-content: center;
-        list-style-type: none;
-        padding: 0;
-        li {
-          margin: 0 5px;
-          i.active {
-            color:$stars;
-          }
-        }
-      }
-      img {
-        max-width:130px;
-        max-height:130px;
-      }
-    }
+
+  .create-button {
+    float: right;
+    background: $orange;
+    color:$white;
   }
-  .guide-item-popup {
-    transition:.5s;
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: $white;
-    z-index: 3;
-    .popup-close {
-      font-size: 24px;
-      color:$black;
-      position: absolute;
-      top: 20px;
-      right: 35px;
-    }
+
+  input,textarea {
+    border-bottom-color:$orange;
   }
 }
 
-.aside-item-generate {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: $white;
-  z-index: 3;
-  transition:.5s;
-  .aside-item_close {
-    cursor: pointer;
-    display: inline-block;
-    position: absolute;
-    font-family:sans-serif;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    color:$black;
-    font-weight: bold;
-  }
-  .aside-item_inner {
+
+@media screen and (max-width: 992px){
+  .place-container {
+    margin-left: 0;
   }
 }
